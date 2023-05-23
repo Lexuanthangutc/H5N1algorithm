@@ -21,15 +21,11 @@ VarSize = [1 dim];   % Size of Decision Variables Matrix
 
 %% MOPSO Parameters
 
-% Max_iter = 200;           % Maximum Number of Iterations
-% 
-% nPop = 200;            % Population Size
-
 nRep = 100;            % Repository Size
 
-w = 0.5;              % Inertia Weight
+w = 1;              % Inertia Weight
 wdamp = 0.99;         % Intertia Weight Damping Rate
-c1 = 1;               % Personal Learning Coefficient
+c1 = 2;               % Personal Learning Coefficient
 c2 = 2;               % Global Learning Coefficient
 
 nGrid = 7;            % Number of Grids per Dimension
