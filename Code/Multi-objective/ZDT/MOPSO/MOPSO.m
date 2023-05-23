@@ -84,10 +84,10 @@ end
 % Store
 empty.popPosition = [];
 empty.popCost = [];
-empty.popPosition = [];
-empty.popCost = [];
-empty.popPosition = [];
-empty.popCost = [];
+empty.popBestPosition = [];
+empty.popBestCost = [];
+empty.GlobalBest_Position= [];
+empty.GlobalBest_Cost = [];
 empty.Archive_member_no = [];
 empty.Archive_F = [];
 empty.Archive_X = [];
