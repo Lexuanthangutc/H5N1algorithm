@@ -20,7 +20,7 @@ Algorithm_Name = 'MH5N1';
 %% Parameters
 Max_iter = 100; % Max Iterations
 nPop = 60; % Number of population
-Number_of_function = 30; % All function needed
+Number_of_function = 10; % All function needed
 
 empty.Name          = [];
 
@@ -52,7 +52,7 @@ NOP     = [100 400 100 100 100 100 100 100 100 100];
 PROPERTY= ['b-'; 'b-'; 'b-'; 'b-'; 'b.'; 'b.';'b-';'b.';'b.';'b.';];
 Archive_no = [100 100 100 100 100 100 100 100 100 100 100];
 
-for F_ID = 1 : 10
+for F_ID = 1 : Number_of_function
 
     tic;
     Test_Suite = 'CEC2009 ';
