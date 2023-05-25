@@ -42,7 +42,7 @@ empty_store.A  = [];
 empty_store.B  = [];
 
 %% For standard and best value in 30 times run the function
-Time2run = 30; % times to run the function
+Time2run = 10; % times to run the function
 
 History = repmat(empty_store,Time2run,1);
 
@@ -249,7 +249,7 @@ if ~exist(folderName, 'dir')
     mkdir(folderName);
 end
 
-for i = 1:Number_of_function
+for i = 5:Number_of_function
     figName = strcat(Figname,'_',num2str(i));
     figPath = fullfile(folderName, [figName, '.fig']);
     hgsave(figure(i),figPath);

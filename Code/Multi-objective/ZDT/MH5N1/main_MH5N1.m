@@ -20,7 +20,7 @@ Algorithm_Name = 'MH5N1';
 %% Parameters
 Max_iter = 100; % Max Iterations
 nPop = 60; % Number of population
-Number_of_function = 5; % All function needed
+Number_of_function = 3; % All function needed
 
 empty.Name          = [];
 
@@ -51,7 +51,7 @@ DIMX    = [30 30 30 30 30];
 NOP     = [100 100 100 100 100]; 
 PROPERTY= ['b-'; 'b-'; 'b-'; 'b-'; 'b.'];
 Archive_no = [100 100 100 100 100 ];
-for F_ID = 1 : Number_of_function
+for F_ID = 3 : Number_of_function
 
     tic;
     Test_Suite = 'ZDT';

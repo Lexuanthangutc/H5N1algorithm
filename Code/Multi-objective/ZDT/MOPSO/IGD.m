@@ -9,10 +9,6 @@ function Score = IGD(ObjPF,truePF)
 %------------------------------- Copyright --------------------------------
 % Copyright (c) 2018-2019 BIMK Group.
 
-%     Distance = min(pdist2(PF,PopObj),[],2);
-%     Score    = mean(Distance);
-
-
 
 q = 2; %the parameter of IGD
 %STEP 1. Obtain the maximum and minimum values of the Pareto front
