@@ -150,7 +150,8 @@ for iter = 1:Max_iter
     popPosition(changeRows) =  pm1(changeRows);
     changeRows =  popPosition < lb;
     popPosition(changeRows) = pm2(changeRows);
-    
+
+    popPosition = CheckBoundary
     % Evaluate new position
     for i = 1:nPop
         popCost(i,:) = CostFunction(popPosition(i,:));   % check cost of competitor
