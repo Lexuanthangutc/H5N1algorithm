@@ -4,8 +4,8 @@ Cost = Stepped_Cantilever_Beam_Cost(x);
     
     Z=0;
     % Penalty constant
-    lam =10^5;
-    lameq =10^5;
+    lam =10^15;
+    lameq =10^15;
     [g,geq] = Stepped_Cantilever_Beam_Constraints(x);
     % Inequality constraints
     for k=1: length (g)
