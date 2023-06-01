@@ -10,7 +10,7 @@ Algorithm_Name = 'H5N1';
 %% Parameters
 Max_iter = 500; % Max Iterations
 nPop = 30; % Number of population
-Number_of_function = 13; % All function needed
+Number_of_function = 23; % All function needed
 
 empty.Name          = [];
 empty.BestCost      = [];
@@ -38,7 +38,7 @@ for F_ID = 1 : Number_of_function
 
     Function_Name = (['F', num2str(F_ID)]);
     % Load details of the selected benchmark function
-    [VarMin,VarMax,~,CostFunction]=Get_F(Function_Name);
+    [VarMin,VarMax,nVar,CostFunction]=Get_F(Function_Name);
 
     A = zeros(Time2run,1); % A = X*1; store the value of Best fitness for X times to run
     B = zeros(Time2run,Max_iter); % B = X*max_iter; store the value of Best fitness for X times to run
@@ -89,9 +89,9 @@ for F_ID = 1 : Number_of_function
     Results(F_ID).CostHistory = Converage_curve_best;
     Results(F_ID).Mean= Aver_A;
     Results(F_ID).STD= STD_A;
-    %     Results(F_ID).SEM = SEM_A;
-    %     Results(F_ID).Time = time;
-    %     Results(F_ID).History = History;
+    Results(F_ID).SEM = SEM_A;
+    Results(F_ID).Time = time;
+    Results(F_ID).History = History;
 
     %     %% Plot Results
     %     figure(F_ID);
@@ -105,12 +105,21 @@ for F_ID = 1 : Number_of_function
     %     close all
 end
 
-% % save
-% save(['History_' num2str(Algorithm_Name) '_150523.mat'],'History','-v7.3')
-% save(['Results_' num2str(Algorithm_Name) '_150523.mat'],'Results','-v7.3')
-% save multi dimension
-save(['History_' Algorithm_Name '_Dim' num2str(nVar) '_150523.mat'],'History','-v7.3')
-save(['Results_' Algorithm_Name '_Dim' num2str(nVar) '_150523.mat'],'Results','-v7.3')
+%% Lưu
+% Tạo tên tệp tin
+timestamp = datestr(now, 'ddmmyy');
+results_filename = ['Results_' Algorithm_Name '_' timestamp '.mat'];
+
+% Xác định đường dẫn tuyệt đối đến thư mục "Data"
+folderPath = fullfile(pwd, 'Data');
+
+% Kiểm tra nếu thư mục không tồn tại, thì tạo mới
+if ~isfolder(folderPath)
+    mkdir(folderPath);
+end
+
+% Lưu biến Results vào tệp tin
+save(fullfile(folderPath, results_filename), 'Results', '-v7.3');
 
 
 

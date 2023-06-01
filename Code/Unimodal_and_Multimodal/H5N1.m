@@ -70,10 +70,10 @@ a = zeros(Max_iter,nPop);
 % Store
 empty.popPosition = [];
 empty.popCost = [];
-empty.popPosition = [];
-empty.popCost = [];
-empty.popPosition = [];
-empty.popCost = [];
+empty.popBestPosition = [];
+empty.popBestCost = [];
+empty.GlobalBest_Position = [];
+empty.GlobalBest_Cost = [];
 % parameters
 empty.c = [];
 empty.p = [];
